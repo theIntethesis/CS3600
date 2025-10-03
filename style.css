@@ -1,3 +1,13 @@
+a {
+    text-decoration: underline;
+    color: #4af626;
+    font-family: monospace;
+    transition: color 0.3s;
+}
+a:hover {
+    color:#f1f1f1;
+}
+
 body {
     background-color: black;
     color: white;
@@ -7,6 +17,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4af626;
 }
 header{
     position: sticky;
@@ -37,18 +53,6 @@ header{
         gap: 4px;
     }
 }
-nav {
-    a {
-        text-decoration: underline;
-        color: #4af626;
-        font-family: monospace;
-        transition: color 0.3s;
-    }
-    a:hover {
-        color:#f1f1f1;
-    }
-}
-
 footer {
     background-color: grey;
     align-items: end;
@@ -59,9 +63,13 @@ footer {
     min-height: 50px;
     bottom: 0;
     nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         gap: 10px;
     }
 }
+
 main {
     margin-top: 100px;
     padding: 0px 10px;
@@ -74,16 +82,22 @@ table {
     border-width: 50px;
     height: 33%;
     width: 100%;
+    align-items: justify;
+    text-align: center;
 }
 tr,td {
-    height: 33%;
-    min-width: 100%;
     border-width: 50px;
     border-radius: 10px;
     border-color: black;
     padding: 5px;
-    height: max-content;
-    text-align: center;
+    max-width: 100%;
+    min-width: 33%;
     font-family: monospace;
     font-size: larger;
+    align-items: center;
+    div {
+        margin: 0 auto;
+        width: 80%;
+        text-align: justify;
+    }
 }
